@@ -107,7 +107,7 @@ const createSLAObject = (
     RT: {
       threshold: calculateThreshold(createdAt, rtThreshold),
       // Check RT only if the conversation is open and threshold is not null
-      condition: status === 'open' && rtThreshold !== null,
+      condition: status !== 'resolved' && rtThreshold !== null,
     },
   };
 
